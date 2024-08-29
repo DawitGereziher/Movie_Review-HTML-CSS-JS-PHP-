@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="video-container"></div>
+   <video autoplay muted loop id="video-bg">
+    <source src="photos&videos/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+    <div id="content_holder">
+        <h1>Movie Review</h1>
+        <div id="registerForm" class="form-container active">
+            <form action="register.php" method="post"> 
+                <h2>Register</h2>
+                <label>First Name<input type="text" required name="firstname"></label><br>
+                <label>Last Name<input type="text" required name="lastname"></label><br>
+                <label>Email<input type="email" required name="email"></label><br>
+                <label>Create Password<input type="password" id="password" required name="password"></label><br>
+                <label>Confirm Password<input type="password" id="confirmPassword" required></label><br>
+                <label>Date of Birth<input type="date" required name="dateofbirth"></label><br>
+                <input type="submit" class="enter" value="Register">
+                <input type="reset" class="enter" value="Reset">
+            </form>
+            <button onclick="changeForm('login')">LOGIN</button>
+        </div>
+        <div id="loginForm" class="form-container">
+            <form action="login.php" method="post">
+                <h2>Login</h2>
+                <label>Email<input type="email" required name="email"></label><br>
+                <label>Password<input type="password" required name="password"></label><br>
+                <input type="submit" class="enter" value="Login">
+                <input type="reset" class="enter" value="Reset">
+            </form>
+            <button onclick="changeForm('register')">REGISTER</button>
+        </div>
+    <script src="index.js"></script>
+</body>
+</html>
